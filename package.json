@@ -1,0 +1,30 @@
+{
+  "name": "pattern-box",
+  "version": "1.0.0",
+  "description": "\"\"",
+  "main": "index.html",
+  "dependencies": {
+    "angular": "^1.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WoJBurgess/pattern-box.git"
+  },
+  "keywords": [
+    "patterns",
+    "angular",
+    "bootstrap",
+    "sass",
+    "scss"
+  ],
+  "author": "Josh Burgess",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WoJBurgess/pattern-box/issues"
+  },
+  "homepage": "https://github.com/WoJBurgess/pattern-box"
+}
