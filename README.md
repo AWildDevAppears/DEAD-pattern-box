@@ -78,3 +78,7 @@ There are two ways to compile sass in this project
 
   Note the space after the class name and the new line at the end. the semicolons are required in sass/less, but even if we were writing pure css it would be good practice to put them in.
 
+## Variables?
+
+  Constant variables (i.e: main colors, break points etc) go in _variables.scss, but you can add variables to the top of your scss file if they are only used in that location, IF, they quote the variables in _variables.scss
+
