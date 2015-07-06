@@ -4,9 +4,11 @@ var sass      = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename    = require('gulp-rename');
 var connect   = require('gulp-connect');
+var watch = require('gulp-watch');
 
 var paths = {
-  sass: ['./scss/**/*.scss']
+  sass:       ['./scss/**/*.scss'],
+  templates:  ['./**/*.html']
 };
 
 gulp.task('watch', function () {
@@ -19,6 +21,12 @@ gulp.task('server', function() {
     port: 1337,
     host: "localhost"
   });
+});
+
+gulp.task('livereload', function() {
+  gulp.src(['css/*.css', 'shared/**/*.js', 'component/**/*.js', '**/*.html'])
+    .pipe(watch(['css/*.css', 'shared/**/*.js', 'component/**/*.js', '**/*.html']))
+    .pipe(connect.reload());
 });
 
 gulp.task('sass', function (done) {
@@ -34,4 +42,4 @@ gulp.task('sass', function (done) {
 });
 
 gulp.task('default', ['sass']);
-gulp.task('serve', ['sass', 'server', 'watch']);
+gulp.task('serve', ['sass', 'server', 'livereload', 'watch']);
