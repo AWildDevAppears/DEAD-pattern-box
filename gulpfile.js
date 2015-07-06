@@ -24,7 +24,7 @@ gulp.task('server', function() {
 gulp.task('sass', function (done) {
   gulp.src('./scss/main.scss')
     .pipe(sass())
-    .pipe(gulp.dest('./www/css/'))
+    .pipe(gulp.dest('./css/'))
     .pipe(minifyCss({
       keepSpecialComments: 0
     }))
