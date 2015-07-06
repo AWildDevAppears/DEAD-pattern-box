@@ -6,5 +6,9 @@ angular.module('pattern-box', ['ui.router'])
       .state('home', {
         url: "/home",
         templateUrl: 'templates/home.html'
+      })
+      .state('post', {
+        url: "/read/:id",
+        templateUrl: 'templates/components/post.html'
       });
   });

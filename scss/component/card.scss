@@ -1,0 +1,20 @@
+.card {
+  background: #fff;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.card__header {
+  border-bottom: solid 1px #333;
+  margin: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card__footer {
+  border-top: solid 1px #333;
+   margin: 5px;
+  margin-top: 10px;
+  padding-top: 10px;
+}

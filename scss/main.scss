@@ -1,6 +1,8 @@
 @import "bootstrap/bootstrap";
 @import "base/variables";
 
+@import "component/card";
+
 body {
   background: $brand-color1;
   padding-top: 70px;

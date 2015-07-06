@@ -1,0 +1,70 @@
+<div class="card">
+  <h1 class="card__header">
+    This repo's gulpfile.js
+  </h1>
+  <pre class="prettyprint">
+var gulp = require('gulp');
+
+var sass      = require('gulp-sass');
+var minifyCss = require('gulp-minify-css');
+var rename    = require('gulp-rename');
+var connect   = require('gulp-connect');
+var watch = require('gulp-watch');
+
+var paths = {
+  sass:       ['./scss/**/*.scss'],
+  templates:  ['./**/*.html']
+};
+
+gulp.task('watch', function () {
+  gulp.watch(paths.sass, ['sass']);
+});
+
+gulp.task('server', function() {
+  connect.server({
+    livereload: true,
+    port: 1337,
+    host: "localhost"
+  });
+});
+
+gulp.task('livereload', function() {
+  gulp.src(['css/*.css', 'shared/**/*.js', 'component/**/*.js', '**/*.html'])
+    .pipe(watch(['css/*.css', 'shared/**/*.js', 'component/**/*.js', '**/*.html']))
+    .pipe(connect.reload());
+});
+
+gulp.task('sass', function (done) {
+  gulp.src('./scss/main.scss')
+    .pipe(sass())
+    .pipe(gulp.dest('./css/'))
+    .pipe(minifyCss({
+      keepSpecialComments: 0
+    }))
+    .pipe(rename({ extname: '.min.css' }))
+    .pipe(gulp.dest('./css/'))
+    .on('end', done);
+});
+
+gulp.task('default', ['sass']);
+gulp.task('serve', ['sass', 'server', 'livereload', 'watch']);
+
+  </pre>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis elementum erat
+    pharetra tincidunt. Duis quis ipsum feugiat, tempor erat vitae, iaculis ipsum. Maecenas id
+    leo aliquam, condimentum ante ut, sagittis sem. Phasellus fermentum venenatis porta. In
+    tincidunt eleifend orci, vitae venenatis tellus laoreet id. Proin nec odio vel tellus
+  </p>
+  <p>
+    Sed et metus facilisis, placerat massa eget, commodo metus. Etiam maximus porttitor ante, id
+    vestibulum dui rutrum a. Etiam urna neque, pretium at eros efficitur, luctus vestibulum est.
+    Fusce pharetra sem vulputate finibus suscipit. Fusce maximus ligula et dapibus vulputate.
+    Nam porttitor lectus quis consectetur fringilla. Vestibulum eget nunc vitae risus luctus
+  </p>
+
+  <div class="card__footer row">
+  <div class="col-xs-6">6 | July | 2015</div>
+  <div class="col-xs-6 col-sm-push-4">Josh Burgess</div>
+  </div>
+</div>
