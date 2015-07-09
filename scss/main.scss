@@ -6,7 +6,12 @@
 
 body {
   background: $brand-color1;
-  padding-top: 70px;
+}
+
+@media (max-width: $screen-sm) {
+  body {
+    padding-top: 70px;
+  }
 }
 
 pre.prettyprint {
