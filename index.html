@@ -26,14 +26,21 @@
 
   </head>
   <body ng-app="pattern-box">
-
     <heading></heading>
 
-    <div ui-view></div>
     <form action="" class="form--fixed-right form-inline hidden-xs">
         <input type="search" class="form-control" placeholder="Search">
         <button type="submit" class="btn btn-info">Search</button>
     </form>
+
+    <div class="row">
+        <div class="hidden-xs">
+            <side-menu></side-menu>
+        </div>
+            <div class="content" ui-view></div>
+        </div>
+    </div>
+
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

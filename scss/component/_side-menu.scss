@@ -1,0 +1,25 @@
+.side-menu {
+  background-color: $navbar-default-bg;
+  height: 100vh;
+  position: fixed;
+  padding: 20px;
+  width: 200px;
+}
+
+.side-menu__header {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.content {
+  margin-left: 210px;
+  margin-right: 30px;
+}
+
+@media(max-width: $screen-xs) {
+  .content {
+    margin: 0 ($grid-gutter-width / 2); // stop content from sinking into the row
+    padding-left: 10px;
+  }
+}
+
