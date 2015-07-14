@@ -1,0 +1,29 @@
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list__item {
+  padding: 5px 20px;
+  background-color: $gray-lighter;
+  margin-bottom: 5px;
+  cursor: pointer;
+
+  &.row {
+    margin-left: 3px;
+     margin-right: 3px;
+  }
+
+  i {
+    font-weight: 600;
+    color: $gray;
+  }
+}
+
+.item__subsection {
+  padding-top: 10px;
+}
+
+i.icon-pos {
+  color: $brand-color3;
+}
