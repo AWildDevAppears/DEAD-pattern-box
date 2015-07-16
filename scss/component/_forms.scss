@@ -1,16 +1,13 @@
-.form__input--search {
-  display: inline-block;
-  float: left;
-  width: 75%;
+.form--fixed-right {
+  position: fixed;
+  right: 0;
+  margin: 20px 0;
+  background-color: $gray-lighter;
+  border: solid 1px $gray-light;
+  border-radius: 5px 0 0 5px;
+  border-right: none;
+  padding: 10px;
+  padding-right: 30px;
+  z-index: 1;
 }
 
-.form__input--search-submit {
-  float: right;
-  display: inline-block;
-  width: 25%;
-}
-
-.form-group--search {
-  margin: 0;
-  padding: 0;
-}

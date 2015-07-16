@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="css/main.css" rel="stylesheet">
     <link href="google-code-prettify/prettify.css" rel="stylesheet"></link>
+    <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet"></link>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,10 +27,20 @@
 
   </head>
   <body ng-app="pattern-box">
-
     <heading></heading>
 
-    <div ui-view></div>
+    <form action="" class="form--fixed-right form-inline hidden-xs">
+        <input type="search" class="form-control" placeholder="Search">
+        <button type="submit" class="btn btn-info">Search</button>
+    </form>
+
+    <div class="row">
+        <div class="hidden-xs">
+            <side-menu></side-menu>
+        </div>
+            <div class="content" ui-view></div>
+        </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
