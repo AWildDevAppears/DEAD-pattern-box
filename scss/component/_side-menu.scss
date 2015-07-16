@@ -1,9 +1,21 @@
+body {
+  overflow-x: hidden;
+}
+
+side-menu {
+  width: 250px;
+  overflow: hidden;
+  display: block;
+  height: 100vh;
+  position: fixed;
+}
+
 .side-menu {
   background-color: $navbar-default-bg;
-  position: fixed;
-  height: 100vh;
+  height: 100%;
   padding: 0;
-  width: 250px;
+  width: 260px;
+  overflow-y: scroll;
 }
 
 .side-menu__header {
@@ -13,12 +25,20 @@
   padding: 40px;
   text-align: center;
   color: #fff;
-  margin-bottom: 20px;
 }
 
 .side-menu__nav {
   padding: 0;
   padding-left: 15px;
+}
+
+.side-menu__block {
+  padding: 10px 30px;
+  color: #eee;
+  background-color: lighten($navbar-default-bg, 5%);
+  margin-bottom: 20px;
+  border-bottom: 1px solid $gray;
+  text-align: center;
 }
 
 .nav__item {
